@@ -1,3 +1,7 @@
+git add pipe_compressed
+git commit -m "Add model file"
+git push
+
 import streamlit as st
 import pickle
 import joblib
