@@ -1,7 +1,4 @@
 import streamlit as st
-import pickle
-df=pickle.load(open('df.pkl','rb'))
-pipe=pickle.load(open('pipe.pkl','rb'))
 import joblib
 pipe=joblib.load('pipe_compressed')
 df=joblib.load('df')
