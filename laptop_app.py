@@ -1,6 +1,6 @@
 
 import streamlit as st
-# import pickle
+import pickle
 # df=pickle.load(open('df.pkl','rb'))
 # pipe=pickle.load(open('pipe.pkl','rb'))
 import joblib
