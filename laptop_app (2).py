@@ -2,7 +2,10 @@
 import streamlit as st
 import pickle
 import joblib
-pipe = joblib.load("models/pipe_compressed.pkl")
+
+import os
+model_path = os.path.join(os.path.dirname(__file__), "pipe_compressed.pkl")
+pipe = joblib.load(model_path)
 
 df=joblib.load('df')
 
