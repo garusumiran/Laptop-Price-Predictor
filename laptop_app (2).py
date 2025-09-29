@@ -1,7 +1,8 @@
 import streamlit as st
-import joblib
+import pickle
+df=pickle.load(open('df.pkl','rb'))
+pipe=pickle.load(open('pipe.pkl','rb'))
 
-df=joblib.load('df')
 
 st.title("Laptop Price Predictor App")
 st.text("This app is using only a select few laptops(around 1200 laptops), so it may not align exactly with real world data")
