@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-pipe=joblib.load('pipe_compressed')
+
 df=joblib.load('df')
 
 st.title("Laptop Price Predictor App")
