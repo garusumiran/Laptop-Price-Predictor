@@ -4,8 +4,18 @@ import pickle
 import joblib
 
 import os
-model_path = os.path.join(os.path.dirname(__file__), "pipe_compressed.pkl")
-pipe = joblib.load(model_path)
+
+model_path = "pipe_compressed.pkl"  # or whatever you set
+
+# Debugging
+print("Current working directory:", os.getcwd())
+print("Files in this directory:", os.listdir())
+
+if os.path.exists(model_path):
+    print("✅ Model file found:", model_path)
+else:
+    print("❌ Model file NOT found!")
+
 
 df=joblib.load('df')
 
