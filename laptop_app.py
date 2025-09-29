@@ -1,24 +1,11 @@
 
 import streamlit as st
-import pickle
+# import pickle
+# df=pickle.load(open('df.pkl','rb'))
+# pipe=pickle.load(open('pipe.pkl','rb'))
 import joblib
-
-import os
-
-model_path = "pipe_compressed.pkl"  # or whatever you set
-
-# Debugging
-print("Current working directory:", os.getcwd())
-print("Files in this directory:", os.listdir())
-
-if os.path.exists(model_path):
-    print("✅ Model file found:", model_path)
-else:
-    print("❌ Model file NOT found!")
-
-
+pipe=joblib.load('pipe_compressed')
 df=joblib.load('df')
-
 
 st.title("Laptop Price Predictor App")
 st.text("This app is using only a select few laptops(around 1200 laptops), so it may not align exactly with real world data")
